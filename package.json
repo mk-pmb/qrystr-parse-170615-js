@@ -1,0 +1,24 @@
+{ "name": "qrystr-parse-170615",
+  "version": "0.1.0",
+  "description": "Yet another query string parser",
+  "keywords": [ "parse", "querystring" ],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/qrystr-parse-170615-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/qrystr-parse-170615-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/qrystr-parse-170615-js/issues"
+  },
+
+  "private": false, "license": "ISC",
+
+  "main": "pqs.js",
+  "scripts": { "test": "nodejs test/all.js" },
+  "directories": { "test": "test" },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
