@@ -3,24 +3,27 @@
 'use strict';
 
 require('usnam-pmb');
+var eq = require('equal-pmb');
 
-var eq = require('equal-pmb'), refQSmod = require('querystring'),
-  pqs = require('qrystr-parse-170615'),
-  slim = require('qrystr-parse-170615/slim');
+(function readmeDemo() {
+  //#u
+  var refQSmod = require('querystring'),
+    pqs = require('qrystr-parse-170615'),
+    slim = require('qrystr-parse-170615/slim');
 
-function verify(qs) {
-  var ex = ((typeof qs === 'string') && refQSmod.parse(qs));
-  if (!ex) {
-    ex = qs;
-    qs = refQSmod.stringify(ex);
+  function verify(qs) {
+    var ex = ((typeof qs === 'string') && refQSmod.parse(qs));
+    if (!ex) {
+      ex = qs;
+      qs = refQSmod.stringify(ex);
+    }
+    eq(pqs(qs), ex);
+    eq(slim(qs), ex);
   }
-  eq(pqs(qs), ex);
-  eq(slim(qs), ex);
-}
 
-
-verify({ hello: 'world', '23': '42', 'úmlæütè': 'µ¶§°¹²³±' });
-
+  verify({ hello: 'world', '23': '42', 'úmlæütè': 'µ¶§°¹²³±' });
+  //#r
+}());
 
 
 

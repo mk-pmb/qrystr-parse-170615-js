@@ -5,14 +5,38 @@ qrystr-parse-170615
 <!--/#echo -->
 
 <!--#echo json="package.json" key="description" -->
-Yet another query string parser
+Reduced version of qrystr: Takes the minimalism further for cases where only
+need decoding very simple QS.
 <!--/#echo -->
 
 
 Usage
 -----
 
-see [test/all.js](test/all.js)
+from [test/all.js](test/all.js):
+
+<!--#include file="test/all.js" start="  //#u" stop="  //#r"
+  outdent="  " code="javascript" -->
+<!--#verbatim lncnt="17" -->
+```javascript
+var refQSmod = require('querystring'),
+  pqs = require('qrystr-parse-170615'),
+  slim = require('qrystr-parse-170615/slim');
+
+function verify(qs) {
+  var ex = ((typeof qs === 'string') && refQSmod.parse(qs));
+  if (!ex) {
+    ex = qs;
+    qs = refQSmod.stringify(ex);
+  }
+  eq(pqs(qs), ex);
+  eq(slim(qs), ex);
+}
+
+verify({ hello: 'world', '23': '42', 'úmlæütè': 'µ¶§°¹²³±' });
+```
+<!--/include-->
+
 
 
 <!--#toc stop="scan" -->
@@ -22,7 +46,7 @@ see [test/all.js](test/all.js)
 Known issues
 ------------
 
-* needs more/better tests and docs
+* Needs more/better tests and docs.
 
 
 

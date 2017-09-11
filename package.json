@@ -1,6 +1,6 @@
 { "name": "qrystr-parse-170615",
-  "version": "0.1.0",
-  "description": "Yet another query string parser",
+  "version": "0.1.2",
+  "description": "Reduced version of qrystr: Takes the minimalism further for cases where only need decoding very simple QS.",
   "keywords": [ "parse", "querystring" ],
 
   "author": "M.K. (https://github.com/mk-pmb)",
