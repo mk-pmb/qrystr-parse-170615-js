@@ -5,8 +5,8 @@ qrystr-parse-170615
 <!--/#echo -->
 
 <!--#echo json="package.json" key="description" -->
-Reduced version of qrystr: Takes the minimalism further for cases where only
-need decoding very simple QS.
+Reduced version of qrystr: Takes the minimalism further for cases where you
+only need decoding of very simple QS.
 <!--/#echo -->
 
 
