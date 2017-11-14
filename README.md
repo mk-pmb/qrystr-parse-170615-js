@@ -10,6 +10,13 @@ only need decoding of very simple QS.
 <!--/#echo -->
 
 
+Still too large a library? You might not need any at all:
+[URLSearchParams][usp-mdn] are now [widely supported][usp-ciu].
+
+  [usp-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+  [usp-ciu]: https://caniuse.com/#feat=urlsearchparams
+
+
 Usage
 -----
 
@@ -52,7 +59,6 @@ Known issues
 
 
 &nbsp;
-
 
 License
 -------
