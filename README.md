@@ -10,6 +10,11 @@ only need decoding of very simple QS.
 <!--/#echo -->
 
 
+* "very simple QS" includes treating `…&flag&…` the same as `…&flag=&…`,
+  i.e. as an empty string value. If you want `true` instead,
+  use the `qrystr` module.
+
+
 Still too large a library? You might not need any at all:
 [URLSearchParams][usp-mdn] are now [widely supported][usp-ciu].
 
